@@ -1,72 +1,158 @@
-*{
-      height: 100%;
-    margin:0px;
-    padding: 0px;
-    box-sizing: border-box;
-      font-family: "Playwrite AU QLD", cursive;
-  
-}
-.container{
-    max-width: 81%;
-   height: auto;
-    padding: 34px;
-    margin: auto;
-    
-
-}
-.container h1,p{
-    text-align: center;
-    
-}
-h1{
-    font-family: "Intel One Mono", monospace;
-  font-optical-sizing: auto;
-
-}
-p{
-    font-size: 20px;
-      font-family: "Montserrat", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playwrite AU QLD", cursive;
 }
 
-input,textarea{
-    width: 80%;
-    font-size: 16px;
-    margin: 11px;
-    padding: 7px;
-    display: block;
-    border: 2px solid black;
-    border-radius: 12px;
-    outline: none;
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-}
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-
-}
-.btn{
-    color: white;
-    background-color: purple;
-    padding: 7px 12px;
-    font-size: 20px;
-    border: 2px solid white;
-    border-radius: 14px;
-    cursor: pointer;
-}
-.bg{
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.6;
-     height: 100vh;
+.bg {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.6;
+  height: 100vh;
   width: 100vw;
   object-fit: cover;
   display: block;
 }
-.submitmsg{
-    font-size: 20px;
-    color: green;
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px 20px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1, .container p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: "Intel One Mono", monospace;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 100%;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 12px;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  background-color: purple;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 2px solid white;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6a1b9a;
+}
+
+/* Confirmation Popup Message */
+.submit-msg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 9999;
+  animation: fadeZoom 0.7s ease-in-out;
+}
+
+.submitmsg {
+  font-size: 1.7rem;
+  padding: 25px 40px;
+  background: #e6ffe6;
+  color: #2e7d32;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-family: "Intel One Mono", monospace;
+  text-align: center;
+  animation: bounceIn 0.6s ease;
+}
+
+/* Fade In + Zoom */
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Bounce In Animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .submitmsg {
+    font-size: 1.2rem;
+    padding: 20px 30px;
+  }
+
+  input, textarea, .btn {
+    font-size: 15px;
+  }
 }
