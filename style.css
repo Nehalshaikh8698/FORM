@@ -1,0 +1,72 @@
+*{
+      height: 100%;
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+      font-family: "Playwrite AU QLD", cursive;
+  
+}
+.container{
+    max-width: 81%;
+   height: auto;
+    padding: 34px;
+    margin: auto;
+    
+
+}
+.container h1,p{
+    text-align: center;
+    
+}
+h1{
+    font-family: "Intel One Mono", monospace;
+  font-optical-sizing: auto;
+
+}
+p{
+    font-size: 20px;
+      font-family: "Montserrat", sans-serif;
+}
+
+input,textarea{
+    width: 80%;
+    font-size: 16px;
+    margin: 11px;
+    padding: 7px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 12px;
+    outline: none;
+
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.btn{
+    color: white;
+    background-color: purple;
+    padding: 7px 12px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+     height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  display: block;
+}
+.submitmsg{
+    font-size: 20px;
+    color: green;
+}
